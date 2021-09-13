@@ -111,8 +111,8 @@ def make_pie_chart(df):
                      height = 700)
     return fig
 
-app = dash.Dash(external_stylesheets=['https://fonts.googleapis.com/css2?family=Montserrat&display=swap'])
-
+app = dash.Dash(__name__, external_stylesheets=['https://fonts.googleapis.com/css2?family=Montserrat&display=swap'])
+server = app.server
 
 # tab layout
 tabs_styles = {
