@@ -9,14 +9,10 @@ from dash import dash_table
 import plotly.express as px
 import time
 import yfinance as yf
-import dash_auth
 
 
 
 cols = ['Ticker', 'Number']
-valid_username_password_pairs = {
-    'ilvnax24er' : '123456'
-}
 
 
 def get_stock_price_fig(df):
@@ -130,11 +126,6 @@ tab_selected_style = {
     'color': 'white',
     'padding': '6px'
 }
-
-
-auth = dash_auth.BasicAuth(
-    app, valid_username_password_pairs
-)
 
 
 app.layout = html.Div([
